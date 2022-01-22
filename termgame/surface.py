@@ -1,5 +1,5 @@
 class Screen:
-    def __init__(self, width=80, height=24):
+    def __init__(self, width=80, height=24, color='\033[1;37m', symbol=' '):
         self.width = width
         self.height = height
 
@@ -7,4 +7,4 @@ class Screen:
 
         # Draw empty board
         for y in range(self.height):
-            print(' ' * self.width)
+            print(f'{color}{symbol}' * self.width)
