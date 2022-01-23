@@ -1,7 +1,9 @@
 def from_rgb_to_string(r: int, g: int, b: int) -> str:
-    assert 0 <= r <= 255 and 0 <= g <= 255 and 0 <= b <= 255
+    for c in r, g, b:
+        assert c in range(0, 256)
+        assert type(c) == int
 
-    if 0 <= r <= 20 and 0 <= g <= 20 and 0 <= b <= 20:
+    if 0 <= r < 21 and 0 <= g < 21 and 0 <= b < 21:
         return '\033[0;30m'  # black
-    elif 230 <= r <= 255 and 230 <= g <= 255 and 230 <= b <= 255:
+    elif 229 < r < 256 and 229 < g < 256 and 229 < b < 256:
         return '\033[1;37m'  # white
