@@ -1,16 +1,20 @@
 import curses
 
 
-class Screen:
+class Game:
     def __init__(self, width=80, height=24, color='\033[0;31m', symbol=' ', bg_color='\033[0;40m'):
         self.width = width
         self.height = height
         self.color = color
         self.symbol = symbol
+
         self.bg_color = bg_color
 
         self.board = ''
 
+        self.create_screen()
+
+    def create_screen(self):
         for y in range(self.height):
             for x in range(self.width):
                 self.board += self.symbol

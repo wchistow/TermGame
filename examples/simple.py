@@ -1,3 +1,3 @@
 import termgame as tg
 
-screen = tg.Screen()
+game = tg.Game()
