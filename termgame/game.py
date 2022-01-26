@@ -12,7 +12,16 @@ class Game:
 
         self.board = ''
 
+        self.tasks = []
+
         self.create_screen()
+
+    def add_task(self, task: callable):
+        self.tasks.append(task)
+
+    def remove_task(self, task: callable):
+        if task in self.tasks:
+            self.tasks.remove(task)
 
     def create_screen(self):
         for y in range(self.height):
@@ -45,3 +54,6 @@ class Game:
                         continue
 
                     canvas.addch(row, column, symbol)
+
+            for task in self.tasks:
+                task()
