@@ -14,8 +14,6 @@ class Game:
 
         self.tasks = []
 
-        self.create_screen()
-
     def add_task(self, task: callable):
         self.tasks.append(task)
 
@@ -25,13 +23,13 @@ class Game:
 
     def create_screen(self):
         for y in range(self.height):
-            for x in range(self.width):
-                self.board += self.symbol
-            self.board += '\n'
+            self.board += self.symbol * self.width + '\n'
 
-        curses.wrapper(self.draw, self.board)
+    def run(self):
+        curses.wrapper(self._run)
 
-    def draw(self, canvas, text):
+    def _run(self, canvas):
+        canvas.nodelay(True)
         while True:
             rows_number, columns_number = canvas.getmaxyx()
             pressed_key_code = canvas.getch()
@@ -39,7 +37,7 @@ class Game:
             if pressed_key_code == 27:  # Escape
                 return
 
-            for row, line in enumerate(text.splitlines()):
+            for row, line in enumerate(self.board.splitlines()):
                 if row >= rows_number:
                     break
 
@@ -56,4 +54,4 @@ class Game:
                     canvas.addch(row, column, symbol)
 
             for task in self.tasks:
-                task()
+                task(canvas)
