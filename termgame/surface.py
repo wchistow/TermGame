@@ -16,10 +16,9 @@ class Screen:
                 self.board += self.symbol
             self.board += '\n'
 
-        curses.wrapper(self.draw, 0, 0, self.board)
+        curses.wrapper(self.draw, self.board)
 
-    def draw(self, canvas, start_row, start_column, text):
-        """Draw multiline text fragment on canvas, erase text instead of drawing if negative=True is specified."""
+    def draw(self, canvas, text):
 
         rows_number, columns_number = canvas.getmaxyx()
 
@@ -28,14 +27,14 @@ class Screen:
             if pressed_key_code == 27:
                 return
 
-            for row, line in enumerate(text.splitlines(), round(start_row)):
+            for row, line in enumerate(text.splitlines()):
                 if row < 0:
                     continue
 
                 if row >= rows_number:
                     break
 
-                for column, symbol in enumerate(line, round(start_column)):
+                for column, symbol in enumerate(line):
                     if column < 0:
                         continue
 
