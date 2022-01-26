@@ -23,11 +23,11 @@ class Game:
         curses.wrapper(self.draw, self.board)
 
     def draw(self, canvas, text):
-        rows_number, columns_number = canvas.getmaxyx()
-
         while True:
+            rows_number, columns_number = canvas.getmaxyx()
             pressed_key_code = canvas.getch()
-            if pressed_key_code == 27:
+
+            if pressed_key_code == 27:  # Escape
                 return
 
             for row, line in enumerate(text.splitlines()):
