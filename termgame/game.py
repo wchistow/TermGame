@@ -28,8 +28,10 @@ class Game:
     def run(self):
         curses.wrapper(self._run)
 
-    def _run(self, canvas):
+    def _run(self, canvas: curses.window):
         canvas.nodelay(True)
+        curses.curs_set(0)
+
         while True:
             rows_number, columns_number = canvas.getmaxyx()
             pressed_key_code = canvas.getch()
