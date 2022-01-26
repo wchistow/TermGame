@@ -19,7 +19,6 @@ class Screen:
         curses.wrapper(self.draw, self.board)
 
     def draw(self, canvas, text):
-
         rows_number, columns_number = canvas.getmaxyx()
 
         while True:
@@ -28,16 +27,10 @@ class Screen:
                 return
 
             for row, line in enumerate(text.splitlines()):
-                if row < 0:
-                    continue
-
                 if row >= rows_number:
                     break
 
                 for column, symbol in enumerate(line):
-                    if column < 0:
-                        continue
-
                     if column >= columns_number:
                         break
 
