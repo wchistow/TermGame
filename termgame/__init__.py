@@ -9,4 +9,4 @@ if sys.platform == 'win32':
 
 from .game import Game
 
-__version__ = '0.1.0'
+__version__ = 'alpha 0.1.0'
