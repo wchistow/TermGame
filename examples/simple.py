@@ -1,5 +1,5 @@
 import termgame as tg
 
-screen = tg.Screen()
+screen = tg.Screen()  # creating screen
 
-screen.draw()
+screen.draw()         # draw empty screen
