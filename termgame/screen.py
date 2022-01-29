@@ -8,7 +8,10 @@ class Screen:
         self.bg_color = bg_color
 
         self.board = []
+        self.empty()
 
+    def empty(self):
+        self.board = []
         size = get_terminal_size()
         self.rows, self.columns = size.lines - 1, size.columns - 1
         for _ in range(self.rows):
