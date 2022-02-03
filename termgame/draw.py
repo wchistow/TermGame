@@ -38,3 +38,18 @@ def rectangle(x, y, width, height, screen, outline_letter='▇', fill_letter=' '
             symbol(current_x, current_y, screen, letter=fill_letter)
         symbol(x + width, current_y, screen, letter=outline_letter)
     line(x, y + height, x + width, y + height, screen, letter=outline_letter)
+
+
+def draw_matrix(matrix: list[list],
+                start_x: int, start_y: int,
+                x1: int, y1: int,
+                x2: int, y2: int,
+                screen,
+                board: dict[int: str]
+                ):
+    for y, line in enumerate(matrix[y1:y2], start_y):
+        for x, letter in enumerate(line[x1:x2], start_x):
+            if letter in board:
+                symbol(x, y, screen, board[letter])
+            else:
+                symbol(x, y, screen, letter)
