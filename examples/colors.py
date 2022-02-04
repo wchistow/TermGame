@@ -1,4 +1,10 @@
-from termgame import color
+import termgame as tg
 
-print(color.from_rgb_to_string(r=10, g=10, b=10) + '@')     # black
-print(color.from_rgb_to_string(r=240, g=240, b=240) + '@')  # white
+screen = tg.Screen()
+
+for x, name in enumerate(dir(tg.color), 2):
+    if not name.startswith('__') and not name == 'join':
+        symbol = tg.color.join('A ', eval('tg.color.' + name))
+        tg.draw.symbol(x, 2, screen, symbol)
+
+screen.draw()
