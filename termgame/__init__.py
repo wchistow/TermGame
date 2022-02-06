@@ -11,5 +11,6 @@ if platform == 'win32':
 from .screen import Screen
 from . import draw
 from . import color
+from . import events
 
 __version__ = 'alpha 0.1.0'
