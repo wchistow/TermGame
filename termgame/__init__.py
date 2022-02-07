@@ -12,5 +12,6 @@ from .screen import Screen
 from . import draw
 from . import color
 from . import events
+from . import image
 
 __version__ = 'alpha 0.1.0'
