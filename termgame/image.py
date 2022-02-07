@@ -20,6 +20,6 @@ class Image:
                     in_image = True
 
                 if not in_image:
-                    symbol(x, y, self.screen, join(letter, self.screen.bg_color))
+                    symbol(x, y, self.screen, join(' ', self.screen.bg_color))
                 else:
                     symbol(x, y, self.screen, letter)
