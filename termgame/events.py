@@ -65,11 +65,14 @@ def read():
         }
 
         while True:
-            key = sys.stdin.read(1)
-            events.put(key)
-            if events.qsize() == 3 and events.get() == '\x1b':
-                events.get()
-                events.put(codes[events.get()])
+            try:
+                key = sys.stdin.read(1)
+                events.put(key)
+                if events.qsize() == 3 and events.get() == '\x1b':
+                    events.get()
+                    events.put(codes[events.get()])
+            except KeyError:
+                pass
     finally:
         set_normal_term()
 
