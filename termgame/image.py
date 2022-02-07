@@ -1,4 +1,5 @@
-from . import draw
+from .draw import symbol
+from .color import join
 
 
 class Image:
@@ -9,4 +10,16 @@ class Image:
         self.screen = screen
 
     def draw(self):
-        pass
+        in_image = False
+
+        for y, line in enumerate(self.text.splitlines(), self.y - 1):
+            for x, letter in enumerate(line, self.x):
+                if letter == ' ' and in_image:
+                    in_image = False
+                elif letter != ' ':
+                    in_image = True
+
+                if not in_image:
+                    symbol(x, y, self.screen, join(letter, self.screen.bg_color))
+                else:
+                    symbol(x, y, self.screen, letter)
