@@ -1,4 +1,6 @@
 from .draw import symbol
+from .color import WHITE
+
 
 class Image:
     def __init__(self, x: int, y: int, text: str, screen):
@@ -20,4 +22,4 @@ class Image:
                 if not in_image:
                     symbol(x, y, self.screen, self.screen.symbol)
                 else:
-                    symbol(x, y, self.screen, letter)
+                    symbol(x, y, self.screen, self.screen.bg + WHITE + letter)
