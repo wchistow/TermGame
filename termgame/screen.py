@@ -3,8 +3,9 @@ from sys import stdout
 
 
 class Screen:
-    def __init__(self, symbol=' '):
-        self.symbol = symbol
+    def __init__(self, symbol=' ', bg='\033[;40m'):
+        self.bg = bg
+        self.symbol = bg + symbol
 
         self.board = []
         self.empty()
