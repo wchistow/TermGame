@@ -3,9 +3,10 @@ from sys import stdout
 
 
 class Screen:
-    def __init__(self, symbol=' ', bg='\033[;40m'):
+    def __init__(self, symbol=' ', color='\033[0;30m', bg=''):
         self.bg = bg
-        self.symbol = bg + symbol
+        self.text_color = color
+        self.symbol = bg + color + symbol
 
         self.board = []
         self.empty()
