@@ -1,5 +1,5 @@
 def symbol(x: int, y: int, screen, letter='▇'):
-    screen.board[y][x] = letter
+    screen.board[x, y] = letter
 
 
 def line(x1: int, y1: int, x2: int, y2: int, screen, letter='▇'):
