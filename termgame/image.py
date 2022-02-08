@@ -1,5 +1,4 @@
 from .draw import symbol
-from .color import WHITE
 
 
 class Image:
@@ -22,4 +21,4 @@ class Image:
                 if not in_image:
                     symbol(x, y, self.screen, self.screen.symbol)
                 else:
-                    symbol(x, y, self.screen, self.screen.bg + WHITE + letter)
+                    symbol(x, y, self.screen, self.screen.bg + self.screen.text_color + letter)
