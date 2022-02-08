@@ -13,7 +13,7 @@ class Screen:
     def empty(self):
         self.board = []
         size = get_terminal_size()
-        self.rows, self.columns = size.lines - 1, size.columns - 1
+        self.rows, self.columns = size.lines + 1, size.columns
         for _ in range(self.rows):
             self.board.append([self.symbol] * self.columns)
 
