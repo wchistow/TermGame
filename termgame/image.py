@@ -22,3 +22,8 @@ class Image:
                     symbol(x, y, self.screen, self.screen.symbol)
                 else:
                     symbol(x, y, self.screen, self.screen.bg + self.screen.text_color + letter)
+
+
+def load(file_name: str, screen) -> Image:
+    with open(file_name) as f:
+        return Image(0, 0, f.read(), screen)
