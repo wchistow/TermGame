@@ -8,8 +8,8 @@ class Clock:
 
     def tick(self, fps: int):
         self._sec_per_tick = 1 / fps
-        if time.time() - self.last_time > self._sec_per_tick:
-            time.sleep((time.time() - self.last_time) - self._sec_per_tick)
+        if time.time() - self.last_time < self._sec_per_tick:
+            time.sleep(self._sec_per_tick - (time.time() - self.last_time))
         self.last_time = time.time()
 
     def get_fps(self) -> float:
