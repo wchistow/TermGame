@@ -56,6 +56,7 @@ events = Queue(maxsize=150)
 
 
 def read():
+    """Work forever and register and save key press."""
     try:
         codes = {
             'A': 'up',
@@ -78,10 +79,12 @@ def read():
 
 
 def set_normal_term():
+    """Set terminal mode to normal."""
     termios.tcsetattr(fd, termios.TCSAFLUSH, old_term)
 
 
 def get_events() -> iter:
+    """Return an iterable object of events."""
     for _ in range(events.qsize()):
         yield ord(events.get())
 

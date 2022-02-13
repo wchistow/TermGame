@@ -2,6 +2,7 @@ from sys import platform
 
 
 class InvalidOS(Exception):
+    """Raises if OS equals to Windows."""
     pass
 
 

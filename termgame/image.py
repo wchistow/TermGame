@@ -9,6 +9,10 @@ class Image:
         self.screen = screen
 
     def draw(self):
+        """
+        Draws attribute text in (self.x, self.y) in screen and
+        fill spaces with screen's symbol
+        """
         in_image = False
 
         for y, line in enumerate(self.text.splitlines(), self.y - 1):
@@ -25,5 +29,9 @@ class Image:
 
 
 def load(file_name: str, screen) -> Image:
+    """
+    Create and return exemplar of class
+    termgame.image.Image with attribute text from file
+    """
     with open(file_name) as f:
         return Image(0, 0, f.read(), screen)

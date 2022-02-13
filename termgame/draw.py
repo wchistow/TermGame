@@ -1,8 +1,10 @@
 def symbol(x: int, y: int, screen, letter='▇'):
+    """Draws a letter in coordinates (x, y)."""
     screen.board[x, y] = letter
 
 
 def line(x1: int, y1: int, x2: int, y2: int, screen, letter='▇'):
+    """Draws a line from (x1, y1) to (x2, y2) with symbol letter"""
     dx = abs(x1 - x2)
     dy = abs(y1 - y2)
     if dx == 0:
@@ -31,6 +33,10 @@ def line(x1: int, y1: int, x2: int, y2: int, screen, letter='▇'):
 
 
 def rectangle(x, y, width, height, screen, outline_letter='▇', fill_letter=' '):
+    """
+    Draws a rectangle in coordinates (x, y) with width, height
+    and outline_letter and fill it with fill_letter.
+    """
     line(x, y, x + width, y, screen, letter=outline_letter)
     for current_y in range(y + 1, y + height):
         symbol(x, current_y, screen, letter=outline_letter)
@@ -47,6 +53,10 @@ def draw_matrix(matrix: list[list],
                 screen,
                 board: dict[int: str]
                 ):
+    """
+    Draws matrix in (start_x, start_y) from (x1, y1) to
+    (x2, y2) and replace elements with board.
+    """
     for y, line in enumerate(matrix[y1:y2], start_y):
         for x, letter in enumerate(line[x1:x2], start_x):
             if letter in board:

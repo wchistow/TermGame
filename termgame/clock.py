@@ -13,4 +13,5 @@ class Clock:
         self.last_time = time.time()
 
     def get_fps(self) -> float:
+        """Return a number of frames per second."""
         return round(1 / self._sec_per_tick, 2)

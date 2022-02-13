@@ -3,6 +3,7 @@ from sys import stdout
 
 
 class Screen:
+    """Provides screen of game."""
     def __init__(self, symbol=' ', color='', bg=''):
         self.bg = bg
         self.text_color = color
@@ -15,17 +16,20 @@ class Screen:
         self.empty()
 
     def empty(self):
+        """Empty attribute board."""
         for y in range(self.rows):
             for x in range(self.columns):
                 self.board[x, y] = self.symbol
             self.board[self.columns, y] = '\n'
 
     def draw(self):
+        """Draws attribute board in screen."""
         stdout.write(f'\033[{self.board.height}A')  # move cursor to (0,0)
         stdout.write(self.board.board.decode('utf-32'))
 
 
 class UTF32Matrix:
+    """Provides matrix with using bytearray in encoding utf-32."""
     def __init__(self, height, width):
         self.height = height
         self.width = width
