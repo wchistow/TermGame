@@ -21,7 +21,7 @@ class Screen:
             self.board[self.columns, y] = '\n'
 
     def draw(self):
-        stdout.write(f'\033[{self.board.height}')  # move cursor to (0,0)
+        stdout.write(f'\033[{self.board.height}A')  # move cursor to (0,0)
         stdout.write(self.board.board.decode('utf-32'))
 
 
