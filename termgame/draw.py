@@ -1,6 +1,6 @@
 def symbol(x: int, y: int, screen, letter='▇'):
     """Draws a letter in coordinates (x, y)."""
-    screen.board[x, y] = letter
+    screen.board[y, x] = letter
 
 
 def line(x1: int, y1: int, x2: int, y2: int, screen, letter='▇'):
