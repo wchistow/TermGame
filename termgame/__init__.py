@@ -16,4 +16,4 @@ from . import events
 from . import image
 from .clock import Clock
 
-__version__ = 'alpha 0.1.0'
+__version__ = 'beta 0.1.0'

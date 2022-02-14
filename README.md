@@ -1,5 +1,5 @@
 # TermGame
-## version - alpha 0.1.0
+## version - beta 0.1.0
 
 ### Library for creating games in terminal
 
