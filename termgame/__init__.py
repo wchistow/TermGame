@@ -15,5 +15,6 @@ from . import color
 from . import events
 from . import image
 from .clock import Clock
+from . import pictures
 
 __version__ = 'beta 0.1.0'

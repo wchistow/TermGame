@@ -7,6 +7,7 @@
  + ### [events](https://github.com/wchistow/TermGame/DOCUMENTATION.md###Events)
  + ### [image](https://github.com/wchistow/TermGame/DOCUMENTATION.md###Image)
  + ### [screen](https://github.com/wchistow/TermGame/DOCUMENTATION.md###Screen)
+ + ### [pictures](https://github.com/wchistow/TermGame/DOCUMENTATION.md###Pictures)
 
 ## Modules:
 
