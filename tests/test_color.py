@@ -1,3 +1,4 @@
+"""This is tests of module termgame.color"""
 import termgame as tg
 
 import random

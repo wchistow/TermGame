@@ -1,3 +1,4 @@
+"""This is tests of module termgame.clock"""
 import termgame as tg
 
 import time
