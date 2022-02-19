@@ -22,4 +22,4 @@ You can find a documentation [here](https://github.com/wchistow/TermGame/blob/ma
 ## Thanks:
 I'd like to thank following people:
  + [Nickolay Chistov](https://github.com/nchistov) help to fix bug with a screen.
- + [Anatoliy Chistov ](https://github.com/FrCln) help in the most difficult problems.
+ + [Anatoliy Chistov ](https://github.com/FrCln) help in the most difficult moments.
