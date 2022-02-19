@@ -28,3 +28,10 @@ class DrawTestCase(unittest.TestCase):
             self.assertEqual(self.screen.board[x, 5], 'A')
         for y in range(0, 6):
             self.assertEqual(self.screen.board[5, y], 'A')
+
+    def test_matrix(self):
+        matrix = [['A' for _ in range(5)] for _ in range(5)]
+        tg.draw.draw_matrix(matrix, 0, 0, 0, 0, 5, 5, self.screen)
+        for x in range(0, 5):
+            for y in range(0, 5):
+                self.assertEqual(self.screen.board[x, y], 'A')
