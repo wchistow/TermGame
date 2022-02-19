@@ -51,12 +51,16 @@ def draw_matrix(matrix: list[list],
                 x1: int, y1: int,
                 x2: int, y2: int,
                 screen,
-                board: dict[int: str]
+                board=None
                 ):
     """
     Draws matrix in (start_x, start_y) from (x1, y1) to
     (x2, y2) and replace elements with board.
     """
+    if board is None:
+        for line in matrix:
+            board = {s: str(s) for s in set([s for s in line])}
+
     for y, line in enumerate(matrix[y1:y2], start_y):
         for x, letter in enumerate(line[x1:x2], start_x):
             if letter in board:
