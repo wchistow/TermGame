@@ -17,4 +17,4 @@ screen = tg.Screen()  # creating screen
 screen.draw()         # draw empty screen
 ```
 ## Help
-You can find a documentation [here](https://github.com/wchistow/TermGame/DOCUMENTATION.md)
+You can find a documentation [here](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md)
