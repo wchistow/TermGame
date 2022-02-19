@@ -15,3 +15,16 @@ class DrawTestCase(unittest.TestCase):
         tg.draw.line(0, 0, 0, 10, self.screen, 'A')
         for y in range(0, 11):
             self.assertEqual(self.screen.board[0, y], 'A')
+
+    def test_rectangle(self):
+        tg.draw.rectangle(0, 0, 5, 5, self.screen, outline_letter='A')
+
+        for y in range(0, 6):
+            self.assertEqual(self.screen.board[0, y], 'A')
+        for x in range(1, 5):
+            self.assertEqual(self.screen.board[x, 0], 'A')
+            for y in range(1, 5):
+                self.assertEqual(self.screen.board[x, y], ' ')
+            self.assertEqual(self.screen.board[x, 5], 'A')
+        for y in range(0, 6):
+            self.assertEqual(self.screen.board[5, y], 'A')
