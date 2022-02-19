@@ -11,7 +11,7 @@ class Screen:
 
         if size is None:
             s = get_terminal_size()
-            size = s.lines, s.columns
+            size = s.lines - 1, s.columns
         self.rows, self.columns = size
 
         self.board = Matrix(self.rows, self.columns, self.symbol)
