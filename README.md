@@ -18,3 +18,8 @@ screen.draw()         # draw empty screen
 ```
 ## Help
 You can find a documentation [here](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md)
+
+## Thanks:
+I'd like to thank following people:
+ + [Nickolay Chistov](https://github.com/nchistov) help to fix bug with a screen.
+ + [Anatoliy Chistov ](https://github.com/FrCln) help in the most difficult problems.
