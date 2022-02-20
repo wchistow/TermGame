@@ -5,4 +5,6 @@ import unittest
 
 
 class EventsTestCase(unittest.TestCase):
-    pass
+    def test_getting_events(self):
+        tg.events.events.put('a')
+        self.assertEqual([tg.events.K_a], list(tg.events.get_events()))
