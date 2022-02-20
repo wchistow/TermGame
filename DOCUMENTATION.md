@@ -168,3 +168,74 @@ board - dictionary with which replace elements of matrix
 
 ---
 ---
+
+ + ## Events
+
+---
+
+### functions:
+
+ + #### get_events ()
+
+description:
+
+Return an iterable object of events.
+
+returns:
+
+type: iter - an iterable object of events
+
+---
+
+
+### constants:
+
+K_a\
+K_b\
+K_c\
+K_d\
+K_e\
+K_f\
+K_g\
+K_h\
+K_i\
+K_j\
+K_k\
+K_l\
+K_m\
+K_n\
+K_o\
+K_p\
+K_q\
+K_r\
+K_s\
+K_t\
+K_u\
+K_v\
+K_w\
+K_x\
+K_y\
+K_z
+
+K_0\
+K_1\
+K_2\
+K_3\
+K_4\
+K_5\
+K_6\
+K_7\
+K_8\
+K_9
+
+K_TAB\
+K_ENTER\
+K_ESC\
+
+K_UP\
+K_DOWN\
+K_RIGHT\
+K_LEFT
+
+---
+---
