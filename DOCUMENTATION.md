@@ -239,3 +239,45 @@ K_LEFT
 
 ---
 ---
+
+ + ### Image
+
+### class Image
+
+#### methods:
+ + #### \_\_init__ (
+   x, y, text, screen
+   #### )
+parameters:
+
+x, y - coordinates from which draws image\
+text - string, which provides an image\
+screen - exemplar of class termgame.Screen
+
+---
+
+ + #### draw ():
+description:
+ 
+Draws attribute text in (self.x, self.y) in screen and
+fill spaces with screen's symbol
+
+---
+
+### functions:
+
+ + #### load(file_name, screen)
+description:
+
+Create and return exemplar of class
+termgame.image.Image with attribute text from file
+with name file_name.
+
+returns:
+
+type: Image - exemplar of class
+termgame.image.Image with attribute text from file
+with name file_name.
+
+---
+---
