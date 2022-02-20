@@ -15,7 +15,7 @@ class Image:
         """
         in_image = False
 
-        for y, line in enumerate(self.text.splitlines(), self.y - 1):
+        for y, line in enumerate(self.text.splitlines(), self.y):
             for x, letter in enumerate(line, self.x):
                 if letter == ' ' and in_image:
                     in_image = False
