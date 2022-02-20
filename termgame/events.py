@@ -51,7 +51,6 @@ K_DOWN = 'down'
 K_RIGHT = 'right'
 K_LEFT = 'left'
 
-
 events = Queue(maxsize=150)
 
 
