@@ -3,6 +3,9 @@
 
 ### Library for creating games in terminal
 
+We need your help to make termgame better!
+New pool requests welcome.
+
 ## Install
 ```
 ```
