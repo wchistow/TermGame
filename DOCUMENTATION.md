@@ -260,7 +260,7 @@ screen -- exemplar of class termgame.Screen
 description:
  
 Draws attribute text in (self.x, self.y) in screen and
-fill spaces with screen's symbol
+fill spaces with screen's symbol.
 
 ---
 

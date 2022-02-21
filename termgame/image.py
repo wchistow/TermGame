@@ -11,7 +11,7 @@ class Image:
     def draw(self):
         """
         Draws attribute text in (self.x, self.y) in screen and
-        fill spaces with screen's symbol
+        fill spaces with screen's symbol.
         """
         in_image = False
 
