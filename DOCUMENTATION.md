@@ -281,3 +281,13 @@ with name file_name.
 
 ---
 ---
+
+ + ## Pictures
+
+This module has some useful pictures:
+
+ + rocket1, rocket2 -- pictures of rockets
+ + alien1 -- picture of alien
+
+---
+---
