@@ -291,3 +291,35 @@ This module has some useful pictures:
 
 ---
 ---
+
+ + ## Screen
+
+### class Screen
+
+#### methods:
+ + #### \_\_init__ (
+   size=None, symbol=' ', color='', bg=''
+   #### )
+parameters:
+
+size -- size of screen, default = os.get_terminal_size()\
+symbol -- symbol, which fill a screen, default -- space\
+color -- color of screen, default -- empty\
+bg -- background of screen, default -- empty
+
+---
+
+ + #### empty ():
+description:
+ 
+Empty attribute board.
+
+---
+
+ + #### draw ():
+description:
+ 
+Draws attribute board in screen.
+
+---
+---
