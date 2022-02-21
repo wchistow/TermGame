@@ -40,11 +40,13 @@ class Matrix:
         self.board = [symbol] * width * height
 
     def __getitem__(self, item: tuple[int, int]):
+        """Item must be y, x."""
         col, row = item
         s = row * self.width + col
         return self.board[s]
 
     def __setitem__(self, key: tuple[int, int], value):
+        """Key must be y, x."""
         row, col = key
         s = row * self.width + col
         self.board[s] = value
