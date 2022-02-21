@@ -21,14 +21,14 @@
  + #### tick (fps: int):
 parameters:
  
- + fps - number of frames per second
+ + fps -- number of frames per second
 
 ---
 
  + #### get_fps ():
 returns:
  
- type: float - number of frames per second
+ type: float -- number of frames per second
 
 ---
 ---
@@ -78,11 +78,11 @@ RESET_COLOR
 #### )
 parameters:
 
- + symbol, arg1, arg2 - strings
+ + symbol, arg1, arg2 -- strings
 
 returns:
 
-type str - symbol + arg1 + arg2
+type: str -- symbol + arg1 + arg2
 
 ---
 ---
@@ -103,9 +103,9 @@ Draws a letter in coordinates (x, y).
 
 parameters:
 
-x, y - coordinates of symbol\
-screen - exemplar of class termgame.Screen\
-letter - symbol that draws on screen
+x, y -- coordinates of symbol\
+screen -- exemplar of class termgame.Screen\
+letter -- symbol that draws on screen
 
 ---
 
@@ -120,10 +120,10 @@ Draws a line from (x1, y1) to (x2, y2) with symbol letter
 
 parameters:
 
-x1, y1 - coordinates from which draws line\
-x2, y2 - coordinates to which draws line\
-screen - exemplar of class termgame.Screen\
-letter - symbol that draws on screen
+x1, y1 -- coordinates from which draws line\
+x2, y2 -- coordinates to which draws line\
+screen -- exemplar of class termgame.Screen\
+letter -- symbol that draws on screen
 
 ---
 
@@ -139,10 +139,10 @@ height and outline_letter and fill it with fill_letter.
 
 parameters:
 
-x, y - coordinates from which draws rectangle\
-width, height - width and height of rectangle\
-screen - exemplar of class termgame.Screen\
-outline_letter, fill_letter - outline_letter and
+x, y -- coordinates from which draws rectangle\
+width, height -- width and height of rectangle\
+screen -- exemplar of class termgame.Screen\
+outline_letter, fill_letter -- outline_letter and
 fill_letter of rectangle
 
 ---
@@ -159,12 +159,12 @@ Draws matrix in (start_x, start_y) from (x1, y1) to
 
 parameters:
 
-matrix - matrix, which one draws\
-start_x, start_y - coordinates from which draws matrix\
-x1, y1 - coordinates in matrix from which it draws\
-x2, y2 - coordinates in matrix to which it draws\
-screen - exemplar of class termgame.Screen\
-board - dictionary with which replace elements of matrix
+matrix -- matrix, which one draws\
+start_x, start_y -- coordinates from which draws matrix\
+x1, y1 -- coordinates in matrix from which it draws\
+x2, y2 -- coordinates in matrix to which it draws\
+screen -- exemplar of class termgame.Screen\
+board -- dictionary with which replace elements of matrix
 
 ---
 ---
@@ -183,7 +183,7 @@ Return an iterable object of events.
 
 returns:
 
-type: iter - an iterable object of events
+type: iter -- an iterable object of events
 
 ---
 
@@ -250,9 +250,9 @@ K_LEFT
    #### )
 parameters:
 
-x, y - coordinates from which draws image\
-text - string, which provides an image\
-screen - exemplar of class termgame.Screen
+x, y -- coordinates from which draws image\
+text -- string, which provides an image\
+screen -- exemplar of class termgame.Screen
 
 ---
 
@@ -275,7 +275,7 @@ with name file_name.
 
 returns:
 
-type: Image - exemplar of class
+type: Image -- exemplar of class
 termgame.image.Image with attribute text from file
 with name file_name.
 
