@@ -14,10 +14,12 @@ class Screen:
             size = s.lines - 1, s.columns
         self.rows, self.columns = size
 
-        self.board = Matrix(self.rows, self.columns, self.symbol)
+        self.empty()
 
     def empty(self):
         """Empty attribute board."""
+        self.board = Matrix(self.rows, self.columns, self.symbol)
+
         for y in range(self.rows):
             for x in range(self.columns - 1):
                 self.board[y, x] = self.symbol
