@@ -2,13 +2,11 @@ import termgame as tg
 
 import random
 
-screen = tg.Screen()
-
 
 class Snake:
-    def __init__(self):
-        self.image = tg.image.Image(screen.columns // 2, screen.rows // 2,
-                           tg.color.join(' ', tg.color.GREEN_BG), screen)
+    def __init__(self, x=screen.columns // 2, y=screen.rows // 2):
+        self.image = tg.image.Image(x, y, tg.color.join(' ',
+                                                        tg.color.GREEN_BG), screen)
         self.heading = 0
 
     def move(self):
@@ -35,6 +33,8 @@ class Apple:
         self.image.draw()
 
 
+screen = tg.Screen()
+
 snake = Snake()
 apple = Apple()
 
@@ -43,7 +43,7 @@ sts_pos = []
 
 
 def new_stamp():
-    sts.append(tg.image.Image(snake.image.x, snake.image.y, '@', screen))
+    sts.append(Snake(snake.image.x, snake.image.y))
     sts_pos.append((snake.image.x, snake.image.y))
 
 
@@ -74,4 +74,32 @@ def check_events():
 
 def new_apple():
     apple.x = random.randint(1, screen.columns - 1)
-    apple.y =  random.randint(1, screen.rows - 1)
+    apple.y = random.randint(1, screen.rows - 1)
+
+
+score = 0
+new_apple()
+
+while True:
+    check_events()
+    check_hit_edge()
+
+    if len(sts) > score * 2:
+        sts.pop(0)
+        sts_pos.pop(0)
+    new_stamp()
+    if snake.image.x == apple.image.x and snake.image.y == apple.image.y:
+        new_apple()
+        score += 1
+    snake.move()
+    if (snake.image.x, snake.image.y) in sts_pos:
+        break
+
+    screen.empty()
+
+    snake.draw()
+    apple.draw()
+    for s in sts:
+        s.draw()
+
+    screen.draw()
