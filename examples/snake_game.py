@@ -1,12 +1,14 @@
 import termgame as tg
 
+import random
+
 screen = tg.Screen()
 
 
 class Snake:
     def __init__(self):
         self.image = tg.image.Image(screen.columns // 2, screen.rows // 2,
-                                    '@', screen)
+                           tg.color.join(' ', tg.color.GREEN_BG), screen)
         self.heading = 0
 
     def move(self):
@@ -23,7 +25,18 @@ class Snake:
         self.image.draw()
 
 
+class Apple:
+    def __init__(self):
+        self.image = tg.image.Image(0, 0,
+                                    tg.color.join(' ', tg.color.RED_BG),
+                                    screen)
+
+    def draw(self):
+        self.image.draw()
+
+
 snake = Snake()
+apple = Apple()
 
 sts = []
 sts_pos = []
@@ -57,3 +70,8 @@ def check_events():
             snake.heading = 90
         elif evt == tg.events.K_DOWN:
             snake.heading = 270
+
+
+def new_apple():
+    apple.x = random.randint(1, screen.columns - 1)
+    apple.y =  random.randint(1, screen.rows - 1)
