@@ -2,11 +2,12 @@ import termgame as tg
 
 import random
 
+screen = tg.Screen()
+
 
 class Snake:
     def __init__(self, x=screen.columns // 2, y=screen.rows // 2):
-        self.image = tg.image.Image(x, y, tg.color.join(' ',
-                                                        tg.color.GREEN_BG), screen)
+        self.image = tg.image.Image(x, y, 'S', screen)
         self.heading = 0
 
     def move(self):
@@ -25,15 +26,12 @@ class Snake:
 
 class Apple:
     def __init__(self):
-        self.image = tg.image.Image(0, 0,
-                                    tg.color.join(' ', tg.color.RED_BG),
-                                    screen)
+        self.image = tg.image.Image(0, 0, 'A', screen)
 
     def draw(self):
         self.image.draw()
 
-
-screen = tg.Screen()
+tg.events.init()
 
 snake = Snake()
 apple = Apple()
