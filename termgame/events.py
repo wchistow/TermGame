@@ -51,7 +51,7 @@ K_RIGHT = 130
 K_LEFT = 131
 
 
-def non_blocking_input():
+def _non_blocking_input():
     class StopInput(Exception):
         pass
 
@@ -72,7 +72,7 @@ def non_blocking_input():
     return buffer
 
 
-def clear_escape(buffer):
+def _clear_escape(buffer):
     codes = {
         'A': K_UP,
         'B': K_DOWN,
@@ -91,8 +91,8 @@ def clear_escape(buffer):
 
 def get_events() -> iter:
     """Return an iterable object of events."""
-    buffer = non_blocking_input()
-    yield from clear_escape(buffer)
+    buffer = _non_blocking_input()
+    yield from _clear_escape(buffer)
 
 
 def init():
