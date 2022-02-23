@@ -60,7 +60,7 @@ def non_blocking_input():
 
     buffer = []
     old_handler = signal.signal(signal.SIGALRM, handler)
-    signal.setitimer(signal.ITIMER_REAL, 0.001)
+    signal.setitimer(signal.ITIMER_REAL, 0.01)
 
     while True:
         try:
