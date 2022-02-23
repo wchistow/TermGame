@@ -5,6 +5,7 @@ class Clock:
     def __init__(self):
         self.last_time = time.time()
         self.fps = None
+        self._sec_per_tick = 0
 
     def tick(self, fps: int):
         self._sec_per_tick = 1 / fps
