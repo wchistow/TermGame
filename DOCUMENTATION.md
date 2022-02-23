@@ -171,6 +171,11 @@ board -- dictionary with which replace elements of matrix
 
  + ## Events
 
+Warning! In start of programme must use:
+```
+termgame.events.init()
+```
+
 ---
 
 ### functions:

@@ -1,8 +1,7 @@
 import atexit
-from queue import Queue
 import sys
 import termios
-from threading import Thread
+import signal
 
 K_a = 97
 K_b = 98
@@ -46,58 +45,68 @@ K_TAB = 9
 K_ENTER = 10
 K_ESC = 27
 
-K_UP = 'up'
-K_DOWN = 'down'
-K_RIGHT = 'right'
-K_LEFT = 'left'
-
-events = Queue(maxsize=150)
+K_UP = 128
+K_DOWN = 129
+K_RIGHT = 130
+K_LEFT = 131
 
 
-def read():
-    """Work forever and register and save key press."""
-    try:
-        codes = {
-            'A': 'up',
-            'B': 'down',
-            'C': 'right',
-            'D': 'left',
-        }
+def non_blocking_input():
+    class StopInput(Exception):
+        pass
 
-        while True:
-            try:
-                key = sys.stdin.read(1)
-                events.put(key)
-                if events.qsize() == 3 and events.get() == '\x1b':
-                    events.get()
-                    events.put(codes[events.get()])
-            except KeyError:
-                pass
-    finally:
-        set_normal_term()
+    def handler(*args):
+        raise StopInput()
+
+    buffer = []
+    old_handler = signal.signal(signal.SIGALRM, handler)
+    signal.setitimer(signal.ITIMER_REAL, 0.001)
+
+    while True:
+        try:
+            buffer.append(sys.stdin.read(1))
+        except StopInput:
+            break
+
+    signal.signal(signal.SIGALRM, old_handler)
+    return buffer
 
 
-def set_normal_term():
-    """Set terminal mode to normal."""
-    termios.tcsetattr(fd, termios.TCSAFLUSH, old_term)
+def clear_escape(buffer):
+    codes = {
+        'A': K_UP,
+        'B': K_DOWN,
+        'C': K_RIGHT,
+        'D': K_LEFT,
+    }
+    i = 0
+    while i < len(buffer):
+        if buffer[i] == '\033' and i < len(buffer) - 2 and buffer[i + 1] == '[':
+            yield codes[buffer[i + 2]]
+            i += 3
+        else:
+            yield ord(buffer[i])
+            i += 1
 
 
 def get_events() -> iter:
     """Return an iterable object of events."""
-    for _ in range(events.qsize()):
-        yield ord(events.get())
+    buffer = non_blocking_input()
+    yield from clear_escape(buffer)
 
 
-fd = sys.stdin.fileno()
-new_term = termios.tcgetattr(fd)
-old_term = termios.tcgetattr(fd)
+def init():
+    def set_normal_term():
+        """Set terminal mode to normal."""
+        termios.tcsetattr(fd, termios.TCSAFLUSH, old_term)
 
-# New terminal setting unbuffered
-new_term[3] = (new_term[3] & ~termios.ICANON & ~termios.ECHO)
-termios.tcsetattr(fd, termios.TCSAFLUSH, new_term)
+    fd = sys.stdin.fileno()
+    new_term = termios.tcgetattr(fd)
+    old_term = termios.tcgetattr(fd)
 
-# Support normal-terminal reset at exit
-atexit.register(set_normal_term)
+    # New terminal setting unbuffered
+    new_term[3] = (new_term[3] & ~termios.ICANON & ~termios.ECHO)
+    termios.tcsetattr(fd, termios.TCSAFLUSH, new_term)
 
-t = Thread(target=read, daemon=True)
-t.start()
+    # Support normal-terminal reset at exit
+    atexit.register(set_normal_term)
