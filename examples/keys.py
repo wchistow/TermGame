@@ -1,5 +1,7 @@
 import termgame as tg
 
+tg.events.init()
+
 running = True
 
 while running:
