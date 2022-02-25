@@ -31,6 +31,7 @@ class Apple:
     def draw(self):
         self.image.draw()
 
+
 tg.events.init()
 
 snake = Snake()
@@ -71,12 +72,14 @@ def check_events():
 
 
 def new_apple():
-    apple.x = random.randint(1, screen.columns - 1)
-    apple.y = random.randint(1, screen.rows - 1)
+    apple.image.x = random.randint(1, screen.columns - 1)
+    apple.image.y = random.randint(1, screen.rows - 1)
 
 
 score = 0
 new_apple()
+
+clock = tg.Clock()
 
 while True:
     check_events()
@@ -101,3 +104,5 @@ while True:
         s.draw()
 
     screen.draw()
+
+    clock.tick(10)
