@@ -1,4 +1,5 @@
 from .draw import symbol
+from .color import join
 
 
 class Image:
@@ -13,19 +14,12 @@ class Image:
         Draws attribute text in (self.x, self.y) in screen and
         fill spaces with screen's symbol.
         """
-        in_image = False
-
         for y, line in enumerate(self.text.splitlines(), self.y):
             for x, letter in enumerate(line, self.x):
-                if letter == ' ' and in_image:
-                    in_image = False
-                elif letter != ' ':
-                    in_image = True
-
-                if not in_image:
+                if letter == ' ':
                     symbol(x, y, self.screen, self.screen.symbol)
                 else:
-                    symbol(x, y, self.screen, self.screen.bg + self.screen.text_color + letter)
+                    symbol(x, y, self.screen, join(letter, self.screen.text_color, self.screen.bg))
 
 
 def load(file_name: str, screen) -> Image:
