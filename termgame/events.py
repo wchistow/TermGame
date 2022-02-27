@@ -45,6 +45,8 @@ K_TAB = 9
 K_ENTER = 10
 K_ESC = 27
 
+SPACE = 32
+
 K_UP = 128
 K_DOWN = 129
 K_RIGHT = 130
