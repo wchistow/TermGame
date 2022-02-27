@@ -1,5 +1,6 @@
 import termgame as tg
 
+import time
 import random
 
 screen = tg.Screen()
@@ -32,6 +33,11 @@ class Apple:
         self.image.draw()
 
 
+class ScoreBoard:
+    def draw(self):
+        tg.draw.symbol(0, 0, screen, str(score))
+
+
 tg.events.init()
 
 snake = Snake()
@@ -48,19 +54,38 @@ def new_stamp():
 
 def check_hit_edge():
     if snake.image.x == screen.columns - 1:
-        snake.image.x = 1
+        game_over()
     elif snake.image.x == 1:
-        snake.image.x = screen.columns - 1
+        game_over()
     elif snake.image.y == screen.rows - 1:
-        snake.image.y = 1
+        game_over()
     elif snake.image.y == 1:
-        snake.image.y = screen.rows - 1
+        game_over()
+
+
+def game_over():
+    screen.empty()
+
+    text = '''
+       _____                         ____
+      / ____|                       / __ \\
+     | |  __  __ _ _ __ ___   ___  | |  | |_   _____ _ ____
+     | | |_ |/ _` | '_ ` _ \\ / _ \\ | | |  | \\ \\ / / _ \\ '__|
+     | |__| | (_| | | | | | |  __/ | |__| |\\ V /  __/ |
+      \\_____|\\__,_|_| |_| |_|\\___|  \\____/  \\_/ \\___|_|
+    '''
+
+    tg.draw.symbol(screen.columns // 2, screen.rows // 2, screen, text)
+
+    screen.draw()
+
+    exit()
 
 
 def check_events():
     for evt in tg.events.get_events():
         if evt == tg.events.K_ESC:
-            exit()
+            game_over()
         elif evt == tg.events.K_RIGHT:
             snake.heading = 0
         elif evt == tg.events.K_LEFT:
@@ -69,6 +94,8 @@ def check_events():
             snake.heading = 90
         elif evt == tg.events.K_DOWN:
             snake.heading = 270
+        elif evt == tg.events.SPACE:
+            new_apple()
 
 
 def new_apple():
@@ -77,21 +104,21 @@ def new_apple():
 
 
 score = 0
-new_apple()
+score_board = ScoreBoard()
 
-clock = tg.Clock()
+new_apple()
 
 while True:
     check_events()
     check_hit_edge()
 
-    if len(sts) > score * 2:
+    if len(sts) > score:
         sts.pop(0)
         sts_pos.pop(0)
     new_stamp()
     if snake.image.x == apple.image.x and snake.image.y == apple.image.y:
-        new_apple()
         score += 1
+        new_apple()
     snake.move()
     if (snake.image.x, snake.image.y) in sts_pos:
         break
@@ -100,9 +127,11 @@ while True:
 
     snake.draw()
     apple.draw()
+    score_board.draw()
+
     for s in sts:
         s.draw()
 
     screen.draw()
 
-    clock.tick(10)
+    time.sleep(0.05)
