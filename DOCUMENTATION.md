@@ -235,7 +235,9 @@ K_9
 
 K_TAB\
 K_ENTER\
-K_ESC\
+K_ESC
+
+SPACE
 
 K_UP\
 K_DOWN\
