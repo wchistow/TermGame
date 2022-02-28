@@ -30,5 +30,5 @@ RESET_COLOR = '\033[0m'
 
 
 def join(symbol: str, arg1: str, arg2='') -> str:
-    """Return symbol + arg1 + arg2"""
+    """Return arg1 + arg2 + symbol"""
     return arg1 + arg2 + symbol + RESET_COLOR

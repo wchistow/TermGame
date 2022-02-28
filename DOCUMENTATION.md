@@ -82,7 +82,7 @@ parameters:
 
 returns:
 
-type: str -- symbol + arg1 + arg2
+type: str -- arg1 + arg2 + symbol
 
 ---
 ---
