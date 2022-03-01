@@ -7,7 +7,7 @@ screen = tg.Screen()
 
 
 class Snake:
-    def __init__(self, x=screen.columns // 2, y=screen.rows // 2):
+    def __init__(self, x=screen.width // 2, y=screen.height // 2):
         self.image = tg.image.Image(x, y, 'S', screen)
         self.heading = 0
 
@@ -53,11 +53,11 @@ def new_stamp():
 
 
 def check_hit_edge():
-    if snake.image.x == screen.columns - 1:
+    if snake.image.x == screen.width - 1:
         game_over()
     elif snake.image.x == 1:
         game_over()
-    elif snake.image.y == screen.rows - 1:
+    elif snake.image.y == screen.height - 1:
         game_over()
     elif snake.image.y == 1:
         game_over()
@@ -75,7 +75,7 @@ def game_over():
       \\_____|\\__,_|_| |_| |_|\\___|  \\____/  \\_/ \\___|_|
     '''
 
-    tg.draw.symbol(screen.columns // 2, screen.rows // 2, screen, text)
+    tg.draw.symbol(screen.width // 2, screen.height // 2, screen, text)
 
     screen.draw()
 
@@ -99,8 +99,8 @@ def check_events():
 
 
 def new_apple():
-    apple.image.x = random.randint(1, screen.columns - 1)
-    apple.image.y = random.randint(1, screen.rows - 1)
+    apple.image.x = random.randint(1, screen.width - 1)
+    apple.image.y = random.randint(1, screen.height - 1)
 
 
 score = 0

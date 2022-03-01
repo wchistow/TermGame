@@ -12,18 +12,18 @@ class Screen:
         if size is None:
             s = get_terminal_size()
             size = s.lines - 1, s.columns
-        self.rows, self.columns = size
+        self.height, self.width = size
 
         self.empty()
 
     def empty(self):
         """Empty attribute board."""
-        self.board = Matrix(self.rows, self.columns, self.symbol)
+        self.board = Matrix(self.height, self.width, self.symbol)
 
-        for y in range(self.rows):
-            for x in range(self.columns - 1):
+        for y in range(self.height):
+            for x in range(self.width - 1):
                 self.board[y, x] = self.symbol
-            self.board[y, self.columns - 1] = '\n'
+            self.board[y, self.width - 1] = '\n'
 
     def draw(self):
         """Draws attribute board in screen."""

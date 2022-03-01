@@ -13,6 +13,6 @@ class ScreenTestCase(unittest.TestCase):
 
         self.screen.empty()
 
-        for y in range(self.screen.rows):
-            for x in range(self.screen.columns):
+        for y in range(self.screen.height):
+            for x in range(self.screen.width):
                 self.assertIn(self.screen.board[x, y], [' ', '\n'])

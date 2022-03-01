@@ -10,16 +10,16 @@ class Ball:
         self.vx = 1
         self.vy = 1
 
-        self.image = tg.image.Image(screen.columns // 2, screen.rows // 2, 'O', self.screen)
+        self.image = tg.image.Image(screen.width // 2, screen.height // 2, 'O', self.screen)
 
     def update(self):
         if self.image.y == 1:
             self.vy = 1
-        elif self.image.y == self.screen.rows - 1:
+        elif self.image.y == self.screen.height - 1:
             self.vy = -1
         if self.image.x == 1:
             self.vx = 1
-        elif self.image.x == self.screen.columns - 2:
+        elif self.image.x == self.screen.width - 2:
             self.vx = -1
 
         self.image.x += self.vx
