@@ -3,11 +3,13 @@ from .color import join
 
 
 class Image:
-    def __init__(self, x: int, y: int, text: str, screen):
+    def __init__(self, x: int, y: int, text: str, screen, text_color='', bg_color=''):
         self.x = x
         self.y = y
         self.text = text
         self.screen = screen
+        self.text_color = text_color
+        self.bg_color = bg_color
 
     def draw(self):
         """
@@ -16,10 +18,7 @@ class Image:
         """
         for y, line in enumerate(self.text.splitlines(), self.y):
             for x, letter in enumerate(line, self.x):
-                if letter == ' ':
-                    symbol(x, y, self.screen, self.screen.symbol)
-                else:
-                    symbol(x, y, self.screen, join(letter, self.screen.text_color, self.screen.bg))
+                symbol(x, y, self.screen, join(letter, self.text_color, self.bg_color))
 
 
 def load(file_name: str, screen) -> Image:
