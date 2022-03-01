@@ -32,12 +32,14 @@ class Ball:
 
 class Paddle:
     def __init__(self, screen):
+        self.width = 20
+
         self.screen = screen
 
-        self.x = 0
-        self.y = 0
+        self.x = screen.width // 2 - self.width // 2
+        self.y = screen.height - 10
 
-        self.image = tg.image.Image(self.x, self.y, ' ' * 10, self.screen,
+        self.image = tg.image.Image(self.x, self.y, ' ' * self.width, self.screen,
                                     bg_color=tg.color.BLUE_BG)
 
     def draw(self):
