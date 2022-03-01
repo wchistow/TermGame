@@ -30,13 +30,30 @@ class Ball:
         self.image.draw()
 
 
+class Paddle:
+    def __init__(self, screen):
+        self.screen = screen
+
+        self.x = 0
+        self.y = 0
+
+        self.image = tg.image.Image(self.x, self.y, ' ' * 10, self.screen,
+                                    bg_color=tg.color.BLUE_BG)
+
+    def draw(self):
+        self.image.draw()
+
+
 screen = tg.Screen()
 ball = Ball(screen)
+paddle = Paddle(screen)
 
 while True:
     screen.empty()
 
     ball.update()
+
+    paddle.draw()
     ball.draw()
 
     screen.draw()
