@@ -10,7 +10,8 @@ class Ball:
         self.vx = 1
         self.vy = 1
 
-        self.image = tg.image.Image(screen.width // 2, screen.height // 2, 'O', self.screen)
+        self.image = tg.image.Image(screen.width // 2, screen.height // 2,
+                                    '●', self.screen, text_color=tg.color.RED)
 
     def update(self):
         if self.image.y == 1:
