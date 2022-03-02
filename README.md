@@ -20,9 +20,9 @@ screen = tg.Screen()  # creating screen
 screen.draw()         # draw empty screen
 ```
 ## Help
-You can find a documentation [here](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md)
+You can find a documentation [here](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md)
 
 ## Thanks:
 I'd like to thank following people:
- + [Nickolay Chistov](https://github.com/nchistov) help to fix bug with a screen.
- + [Anatoliy Chistov ](https://github.com/FrCln) help in the most difficult moments.
+ + [Nickolay Chistov](https://gitflic.ru/user/nchistov) help to fix bug with a screen.
+ + [Anatoliy Chistov ](https://gitflic.ru/user/codefather) help in the most difficult moments.

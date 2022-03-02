@@ -1,13 +1,13 @@
 # Documentation of TermGame library version 0.1.0
 
 ## Module index:
- + ### [clock](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md###clock)
- + ### [color](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md###color)
- + ### [draw](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md###draw)
- + ### [events](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md###events)
- + ### [image](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md###image)
- + ### [pictures](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md###pictures)
- + ### [screen](https://github.com/wchistow/TermGame/blob/master/DOCUMENTATION.md###screen)
+ + ### [clock](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###clock)
+ + ### [color](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###color)
+ + ### [draw](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###draw)
+ + ### [events](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###events)
+ + ### [image](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###image)
+ + ### [pictures](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###pictures)
+ + ### [screen](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###screen)
 
 ## Modules:
 
