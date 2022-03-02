@@ -295,6 +295,7 @@ This module has some useful pictures:
 
  + rocket1, rocket2 -- pictures of rockets
  + alien1 -- picture of alien
+ + ball -- picture of ball
 
 ---
 ---
