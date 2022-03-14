@@ -2,7 +2,7 @@
 
 ### Run
 
-In first install termgame library ([instruction](https://github.com/wchistow/TermGame##install))
+In first install termgame library ([instruction](https://gitflic.ru/project/wchistow/term-game))
 
 After that run necessary example:
 
