@@ -7,7 +7,11 @@ We need your help to make termgame better!
 New pool requests welcome.
 
 ## Install
-```
+
+Install with [pygi](https://gitflic.ru/project/wchistow/pygi) (at first install it):
+
+```commandline
+pygi install https://gitflic.ru/project/wchistow/term-game.git termgame
 ```
 
 ## Getting started
@@ -24,5 +28,5 @@ You can find a documentation [here](https://gitflic.ru/project/wchistow/term-gam
 
 ## Thanks:
 I'd like to thank following people:
- + [Nickolay Chistov](https://gitflic.ru/user/nchistov) help to fix bug with a screen.
- + [Anatoliy Chistov ](https://gitflic.ru/user/codefather) help in the most difficult moments.
+ + [Nickolay Chistov](https://gitflic.ru/user/nchistov) helps to fix bug with a screen.
+ + [Anatoliy Chistov](https://gitflic.ru/user/codefather) helps in the most difficult moments.
