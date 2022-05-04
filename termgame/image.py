@@ -6,6 +6,9 @@ class Image:
     def __init__(self, x: int, y: int, text: str, screen, text_color='', bg_color=''):
         self.x = x
         self.y = y
+        self.width = max([len(line) for line in text.splitlines()])
+        self.height = len(text.splitlines())
+
         self.text = text
         self.screen = screen
         self.text_color = text_color
