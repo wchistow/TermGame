@@ -1,15 +1,11 @@
-# Examples for termgame library
+# Примеры к библиотеке termgame
 
-### Run
+### Запуск
 
-In first install termgame library ([instruction](https://gitflic.ru/project/wchistow/term-game))
+Сначала установите termgame ([инструкция](https://gitflic.ru/project/wchistow/term-game)).
 
-After that run necessary example:
+Затем склонируйте этот проект и запустите необходимый пример.
 
-```
-python3 termgame/<name of example>
-```
+### Ошибки
 
-### Errors
-
-If you find an error in any example, say to us, please.
+Если вы нашли ошибку в каком-либо примере, скажите об этом нам, пожалуйста.

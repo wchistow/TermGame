@@ -1,32 +1,32 @@
 # TermGame
-## version - 0.1.0
+## версия - 0.1.0
 
-### Library for creating games in terminal
+### Библиотека для создания игр для терминала.
 
-We need your help to make termgame better!
-New pool requests welcome.
+Нам нужна ваша помощь, для того чтобы сделать termgame лучше!
+Пишите проблемы и пожелания [здесь](https://gitflic.ru/project/wchistow/term-game/issue/create)
 
-## Install
+## Установка
 
-Install with [pygi](https://gitflic.ru/project/wchistow/pygi) (at first install it):
+Установите с помощью [pygi](https://gitflic.ru/project/wchistow/pygi) (сначала установите его):
 
 ```commandline
 pygi install https://gitflic.ru/project/wchistow/term-game.git termgame
 ```
 
-## Getting started
-The simple example:
+## Начало работы.
+Простой пример:
 ```python
 import termgame as tg
 
-screen = tg.Screen()  # creating screen
+screen = tg.Screen()  # создание экрана игры.
 
-screen.draw()         # draw empty screen
+screen.draw()         # отрисовка пустого экрана.
 ```
-## Help
-You can find a documentation [here](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md)
+## Помощь
+Вы можете найти документацию [здесь](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md) (на английском).
 
 ## Thanks:
-I'd like to thank following people:
- + [Nickolay Chistov](https://gitflic.ru/user/nchistov) helps to fix bug with a screen.
- + [Anatoliy Chistov](https://gitflic.ru/user/codefather) helps in the most difficult moments.
+Я хотел бы поблагодарить следующих людей:
+ + [Николай Чистов](https://gitflic.ru/user/nchistov) помог исправить баг с экраном.
+ + [Анатолий Чистов](https://gitflic.ru/user/codefather) помогал в самые трудные моменты.
