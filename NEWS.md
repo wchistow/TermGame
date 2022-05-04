@@ -6,8 +6,9 @@
  + Метод collide_point класса image.Image
  + Метод collide_image класса image.Image
 ### Изменено:
-
+Ничего не изменено
 ### Удалено:
+Ничего не удалено
 
 ---
 
