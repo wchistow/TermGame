@@ -15,6 +15,7 @@ class Image:
         self.bg_color = bg_color
 
     def collide_point(self, x: int, y: int) -> bool:
+        """Return True if point (x, y) collide with image, else False."""
         if x in range(x, x + self.width + 1) and y in range(y, y + self.height + 1):
             return True
         return False

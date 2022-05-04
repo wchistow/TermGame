@@ -263,6 +263,16 @@ screen -- exemplar of class termgame.Screen
 
 ---
 
+ + #### collide_point(x, y):
+parameters:
+
+x, y -- coordinates, that function checks.
+
+description:
+Return True if point (x, y) collide with image, else False.
+
+---
+
  + #### draw ():
 description:
  
