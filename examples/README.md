@@ -1,8 +1,8 @@
-# Примеры к библиотеке termgame
+# Примеры к библиотеке TermGame
 
 ### Запуск
 
-Сначала установите termgame ([инструкция](https://gitflic.ru/project/wchistow/term-game)).
+Сначала установите TermGame ([инструкция](https://gitflic.ru/project/wchistow/term-game)).
 
 Затем склонируйте этот проект и запустите необходимый пример.
 
