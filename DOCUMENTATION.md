@@ -269,7 +269,19 @@ parameters:
 x, y -- coordinates, that function checks.
 
 description:
+
 Return True if point (x, y) collide with image, else False.
+
+---
+
+ + #### collide_image(image):
+parameters:
+
+image -- exemplar of class image.Image.
+
+description:
+
+Return True if image collide with an image, to that this function, else False.
 
 ---
 

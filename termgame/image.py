@@ -20,6 +20,10 @@ class Image:
             return True
         return False
 
+    def collide_image(self, image) -> bool:
+        """Return True if image collide with an image, to that this function, else False."""
+        return image.collide_point(self.x, self.y)
+
     def draw(self):
         """
         Draws attribute text in (self.x, self.y) in screen and
