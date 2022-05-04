@@ -116,7 +116,7 @@ while True:
         sts.pop(0)
         sts_pos.pop(0)
     new_stamp()
-    if snake.image.x == apple.image.x and snake.image.y == apple.image.y:
+    if snake.image.collide_point(apple.image.x, apple.image.y):
         score += 1
         new_apple()
     snake.move()

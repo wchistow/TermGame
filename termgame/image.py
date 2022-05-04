@@ -14,6 +14,11 @@ class Image:
         self.text_color = text_color
         self.bg_color = bg_color
 
+    def collide_point(self, x: int, y: int) -> bool:
+        if x in range(x, x + self.width + 1) and y in range(y, y + self.height + 1):
+            return True
+        return False
+
     def draw(self):
         """
         Draws attribute text in (self.x, self.y) in screen and
