@@ -24,8 +24,7 @@ class Ball:
         elif self.image.x == self.screen.width - 2:
             self.vx = -1
 
-        if self.image.y == self.paddle.image.y - 1 and \
-                self.image.x in range(self.paddle.image.x, self.paddle.image.x + self.paddle.width):
+        if self.paddle.image.collide_point(self.image.x, self.image.y + 1):
             self.vy = -1
 
         self.image.x += self.vx
