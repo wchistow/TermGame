@@ -22,7 +22,10 @@ class Image:
 
     def collide_image(self, image) -> bool:
         """Return True if image collide with an image, to that this function, else False."""
-        return image.collide_point(self.x, self.y)
+        if set(range(self.x, self.x + self.width + 1)) | set(range(image.x, image.x + image.width + 1)) != set():
+            if set(range(self.y, self.y + self.height + 1)) | set(range(image.y, image.y + image.height + 1)) != set():
+                return True
+        return False
 
     def draw(self):
         """
