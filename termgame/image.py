@@ -16,7 +16,7 @@ class Image:
 
     def collide_point(self, x: int, y: int) -> bool:
         """Return True if point (x, y) collide with image, else False."""
-        if x in range(self.x, x + self.width + 1) and y in range(self.y, y + self.height + 1):
+        if x in range(self.x, self.x + self.width + 1) and y in range(self.y, self.y + self.height + 1):
             return True
         return False
 
