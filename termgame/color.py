@@ -31,4 +31,7 @@ RESET_COLOR = '\033[0m'
 
 def join(symbol: str, arg1: str, arg2='') -> str:
     """Return arg1 + arg2 + symbol"""
-    return arg1 + arg2 + symbol + RESET_COLOR
+    if not arg1 and not arg2:
+        return arg1 + arg2 + symbol
+    else:
+        return arg1 + arg2 + symbol + RESET_COLOR
