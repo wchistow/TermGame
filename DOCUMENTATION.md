@@ -5,6 +5,7 @@
  + ### [color](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###color)
  + ### [draw](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###draw)
  + ### [events](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###events)
+ + ### [font](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###font)
  + ### [image](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###image)
  + ### [pictures](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###pictures)
  + ### [screen](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###screen)
@@ -192,7 +193,6 @@ type: iter -- an iterable object of events
 
 ---
 
-
 ### constants:
 
 K_a\
@@ -243,6 +243,39 @@ K_UP\
 K_DOWN\
 K_RIGHT\
 K_LEFT
+
+---
+---
+
+ + ### Font
+
+---
+
+### functions:
+
+ + #### join ()
+
+description:
+
+Return arg1 + symbol
+
+returns:
+
+type: str -- arg1 + symbol
+
+---
+
+### constants:
+
+BOLD\
+HALF_BOLD\
+ITALICS\
+UNDERLINED\
+FLASHING\
+DEDICATED\
+INVISIBLE\
+CROSSED_OUT\
+RESET_FONT\
 
 ---
 ---

@@ -5,6 +5,7 @@
 ### Добавлено:
  + Метод collide_point класса image.Image
  + Метод collide_image класса image.Image
+ + Модуль font
 ### Изменено:
 Ничего не изменено
 ### Удалено:

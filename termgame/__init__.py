@@ -13,6 +13,7 @@ from .clock import Clock
 from . import color
 from . import draw
 from . import events
+from . import font
 from . import image
 from . import pictures
 from .screen import Screen
