@@ -18,4 +18,4 @@ from . import image
 from . import pictures
 from .screen import Screen
 
-__version__ = 'alpha 0.2.0'
+__version__ = 'beta 0.2.0'

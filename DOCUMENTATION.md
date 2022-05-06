@@ -1,4 +1,4 @@
-# Documentation of TermGame library version alpha 0.2.0
+# Documentation of TermGame library version beta 0.2.0
 
 ## Module index:
  + ### [clock](https://gitflic.ru/project/wchistow/term-game/blob?file=DOCUMENTATION.md###clock)
