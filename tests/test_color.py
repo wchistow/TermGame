@@ -7,6 +7,10 @@ import unittest
 
 
 class ColorTestCase(unittest.TestCase):
+    def test_color_func_join_with_empty_args(self):
+        for s in random.sample(string.printable, 10):
+            self.assertEqual(tg.color.join(s, '', ''), s)
+
     def test_color_func_join_with_2_args(self):
         for s1 in random.sample(string.printable, 10):
             for s2 in random.sample(string.printable, 10):
