@@ -70,3 +70,16 @@ def matrix(drawing_matrix: list[list[Any]],
                 symbol(x, y, screen, board[letter])
             else:
                 symbol(x, y, screen, letter)
+
+
+def text(drawing_text: str, x: int, y: int, screen):
+    """Draws drawing_text in screen, when '\n' it's real line break."""
+    cx, cy = x, y
+
+    for letter in drawing_text:
+        if letter == '\n':
+            cy += 1
+            cx = x
+        else:
+            symbol(cx, cy, screen, letter)
+            cx += 1

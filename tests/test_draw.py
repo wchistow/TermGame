@@ -36,3 +36,11 @@ class DrawTestCase(unittest.TestCase):
         for x in range(0, 5):
             for y in range(0, 5):
                 self.assertEqual(self.screen.board[x, y], 'A')
+
+    def test_text(self):
+        text = 'Hello\nWorld'
+        tg.draw.text(text, 0, 0, self.screen)
+        for x, letter in zip(range(0, 6), 'Hello'):
+            self.assertEqual(self.screen.board[x, 0], letter)
+        for x, letter in zip(range(0, 6), 'World'):
+            self.assertEqual(self.screen.board[x, 1], letter)

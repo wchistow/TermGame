@@ -160,12 +160,28 @@ Draws drawing_matrix in (start_x, start_y) from (x1, y1) to
 
 parameters:
 
-matrix -- matrix, which one draws\
+drawing_matrix -- matrix, which one draws\
 start_x, start_y -- coordinates from which draws matrix\
 x1, y1 -- coordinates in matrix from which it draws\
 x2, y2 -- coordinates in matrix to which it draws\
 screen -- exemplar of class termgame.Screen\
 board -- dictionary with which replace elements of matrix
+
+---
+
+ + #### text(
+   drawing_text, x, y, screen
+   #### )
+
+description:
+
+Draws drawing_text in screen, when '\n' it's real line break.
+
+parameters:
+
+drawing_text -- text, which one draws\
+x, y -- coordinates from which draws text\
+screen -- exemplar of class termgame.Screen\
 
 ---
 ---

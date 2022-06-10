@@ -9,6 +9,7 @@ tg.draw.line(15, 20, 10, 0, screen)
 tg.draw.line(30, 13, 45, 28, screen)
 tg.draw.line(20, 1, 30, 1, screen)
 tg.draw.rectangle(20, 20, 10, 10, screen)
+tg.draw.text('Hello\nWorld!', 5, 20, screen)
 
 matrix = [[random.randint(0, 1) for _ in range(16)] for _ in range(11)]
 
