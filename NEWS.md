@@ -8,6 +8,7 @@
  + Модуль font
 ### Изменено:
  + Функция termgame.color.join()
+ + Функция termgame.draw.draw_matrix переименована в termgame.draw.matrix
 ### Удалено:
 Ничего не удалено
 

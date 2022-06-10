@@ -12,6 +12,6 @@ tg.draw.rectangle(20, 20, 10, 10, screen)
 
 matrix = [[random.randint(0, 1) for _ in range(16)] for _ in range(11)]
 
-tg.draw.draw_matrix(matrix, 35, 3, 0, 0, 15, 10, screen, {0: 'A', 1: 'B'})
+tg.draw.matrix(matrix, 35, 3, 0, 0, 15, 10, screen, {0: 'A', 1: 'B'})
 
 screen.draw()
