@@ -148,14 +148,14 @@ fill_letter of rectangle
 
 ---
 
- + #### draw_matrix (
-   matrix, start_x, start_y,
+ + #### matrix (
+   drawing_matrix, start_x, start_y,
    x1, y1, x2, y2, screen, board
    #### )
 
 description:
 
-Draws matrix in (start_x, start_y) from (x1, y1) to
+Draws drawing_matrix in (start_x, start_y) from (x1, y1) to
 (x2, y2) and replace elements with board.
 
 parameters:

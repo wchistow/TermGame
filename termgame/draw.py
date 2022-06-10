@@ -1,3 +1,6 @@
+from typing import Any
+
+
 def symbol(x: int, y: int, screen, letter='▇'):
     """Draws a letter in coordinates (x, y)."""
     screen.board[y, x] = letter
@@ -46,7 +49,7 @@ def rectangle(x, y, width, height, screen, outline_letter='▇', fill_letter=' '
     line(x, y + height, x + width, y + height, screen, letter=outline_letter)
 
 
-def matrix(drawing_matrix: list[list],
+def matrix(drawing_matrix: list[list[Any]],
            start_x: int, start_y: int,
            x1: int, y1: int,
            x2: int, y2: int,
@@ -54,7 +57,7 @@ def matrix(drawing_matrix: list[list],
            board=None
            ):
     """
-    Draws matrix in (start_x, start_y) from (x1, y1) to
+    Draws drawing_matrix in (start_x, start_y) from (x1, y1) to
     (x2, y2) and replace elements with board.
     """
     if board is None:
