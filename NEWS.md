@@ -7,6 +7,7 @@
  + Метод collide_image класса image.Image
  + Модуль termgame.font
  + Функция termgame.draw.text()
+ + Функция termgame.events.get_unicode()
 ### Изменено:
  + Функция termgame.color.join()
  + Функция termgame.draw.draw_matrix() переименована в termgame.draw.matrix()

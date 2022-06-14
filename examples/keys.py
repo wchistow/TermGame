@@ -12,4 +12,4 @@ while running:
         elif evt == tg.events.K_h:
             print('Help')
         else:
-            print(evt)
+            print(tg.events.get_unicode(evt))

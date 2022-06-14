@@ -97,6 +97,12 @@ def get_events() -> iter:
     yield from _clear_escape(buffer)
 
 
+def get_unicode(event: int) -> str:
+    if type(event) != int:
+        raise TypeError(f'the event argument must be an integer, but got {type(event)}.')
+    return chr(event)
+
+
 def init():
     def set_normal_term():
         """Set terminal mode to normal."""
