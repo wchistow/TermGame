@@ -84,7 +84,10 @@ def _clear_escape(buffer):
     i = 0
     while i < len(buffer):
         if buffer[i] == '\033' and i < len(buffer) - 2 and buffer[i + 1] == '[':
-            yield codes[buffer[i + 2]]
+            try:
+                yield codes[buffer[i + 2]]
+            except KeyError:  # some unknown event.
+                pass
             i += 3
         else:
             yield ord(buffer[i])
