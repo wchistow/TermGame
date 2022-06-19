@@ -3,7 +3,10 @@ from typing import Any
 
 def symbol(x: int, y: int, screen, letter='▇'):
     """Draws a letter in coordinates (x, y)."""
-    screen.board[y, x] = letter
+    try:
+        screen.board[y, x] = letter
+    except IndexError:  # user try to draw in out of screen.
+        pass
 
 
 def line(x1: int, y1: int, x2: int, y2: int, screen, letter='▇'):
